@@ -14,7 +14,54 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@test-backend-insignia-nx-nest-next/authentications": [
+        "libs/authentications/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/components": [
+        "libs/components/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/components/server": [
+        "libs/components/src/server.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/contact-groups": [
+        "libs/contact-groups/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/contacts": [
+        "libs/contacts/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-contact-group-management": [
+        "libs/pages-contact-group-management/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-contact-group-management/server": [
+        "libs/pages-contact-group-management/src/server.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-contact-management": [
+        "libs/pages-contact-management/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-contact-management/server": [
+        "libs/pages-contact-management/src/server.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-login": [
+        "libs/pages-login/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-login/server": [
+        "libs/pages-login/src/server.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-register": [
+        "libs/pages-register/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-register/server": [
+        "libs/pages-register/src/server.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-user-management": [
+        "libs/pages-user-management/src/index.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/pages-user-management/server": [
+        "libs/pages-user-management/src/server.ts"
+      ],
+      "@test-backend-insignia-nx-nest-next/users": ["libs/users/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
