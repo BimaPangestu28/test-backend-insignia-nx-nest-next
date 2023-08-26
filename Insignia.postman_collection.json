@@ -1,0 +1,614 @@
+{
+	"info": {
+		"_postman_id": "2c926c39-a24a-470a-ae48-661f2d7808ff",
+		"name": "Insignia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20066672",
+		"_collection_link": "https://galactic-shadow-408917.postman.co/workspace/Soby~d3b70494-0cec-433a-bffc-76a01a97a4f1/collection/20066672-2c926c39-a24a-470a-ae48-661f2d7808ff?action=share&source=collection_link&creator=20066672"
+	},
+	"item": [
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"address\": \"{{$randomStreetAddress}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jocelyn Schroeder\",\n    \"email\": \"ryceduj@mailinator.com\",\n    \"phoneNumber\": \"+1 (486) 549-4606\",\n    \"address\": \"Libero sed porro eaq\",\n    \"contactGroupIds\": [\n        \"e2aa8902-ce7a-4c7b-9a71-9accbdefe9d4\",\n        \"57d26d48-3cb8-4bc7-911f-8c38e1de76d6\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contacts/6f8d53fb-3b00-4b74-a045-4b1832fa396d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts",
+								"6f8d53fb-3b00-4b74-a045-4b1832fa396d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"address\": \"{{$randomStreetAddress}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contacts/064da9d5-af14-41c2-8291-e7478eae8748",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts",
+								"064da9d5-af14-41c2-8291-e7478eae8748"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/contacts/064da9d5-af14-41c2-8291-e7478eae8748",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contacts",
+								"064da9d5-af14-41c2-8291-e7478eae8748"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact Group",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMkBlbWFpbC5kZXYiLCJpZCI6ImNsbG5sb2M0czAwMDFnZDFpZ2ppdDZzb2giLCJuYW1lIjoiRHIuIE1lZ2FuIEplbmtpbnMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2OTI4ODI5OTUsImV4cCI6MTY5Mjk2OTM5NX0.3Wysa9hSh1kZ4FawGYXS11WtB1TmAXGashOp1Ux9vx4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"hello\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contact-groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contact-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"description\": \"{{$randomLoremText}}\",\n    \"contactIds\": [\"7d2ecb22-9a51-4546-b2ba-18898a30d8f8\", \"af7390f8-6dff-42fa-a663-4e80137f585e\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contact-groups",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contact-groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"description\": \"{{$randomLoremText}}\",\n    \"contactIds\": [\"7d2ecb22-9a51-4546-b2ba-18898a30d8f8\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contact-groups/5803e561-fdfe-4584-a590-b9742b279a2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contact-groups",
+								"5803e561-fdfe-4584-a590-b9742b279a2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"address\": \"{{$randomStreetAddress}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/contact-groups/5803e561-fdfe-4584-a590-b9742b279a2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contact-groups",
+								"5803e561-fdfe-4584-a590-b9742b279a2d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IlN1c2FuYS5CbGFuZGFAaG90bWFpbC5jb20iLCJpZCI6IjNhZDQ2MDJhLTVlNDMtNGJmYi1iZmY3LWM2NjEzYTBlNzQyMiIsImlhdCI6MTY5Mjc5MDU5OCwiZXhwIjoxNjkyODc2OTk4fQ.NUoeyVhBAtHwAUH1fNXOqBPwRhZppovXwayEyv63KXg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/contact-groups/5803e561-fdfe-4584-a590-b9742b279a2d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"contact-groups",
+								"5803e561-fdfe-4584-a590-b9742b279a2d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentications",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin2@email.dev\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/authentications/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"authentications",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{$randomEmail}}\",\n    \"password\": \"password123\",\n    \"name\": \"{{$randomFullName}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/authentications/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"authentications",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"password\": \"password123\",\n    \"role\": \"ADMIN\",\n    \"email\": \"admin@email.dev\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"password\": \"password123\",\n    \"role\": \"ADMIN\",\n    \"email\": \"admin@email.dev\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/cllnljjcr0000gd1ionqfh4f9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"cllnljjcr0000gd1ionqfh4f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMkBlbWFpbC5kZXYiLCJpZCI6ImNsbG5sb2M0czAwMDFnZDFpZ2ppdDZzb2giLCJpYXQiOjE2OTI3ODgzODYsImV4cCI6MTY5MjgyNDM4Nn0.MkJPxiUP-Q9YQkqly3NurV7v7ynXGrIYeBqSL9a2Fg8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluMkBlbWFpbC5kZXYiLCJpZCI6ImNsbG5sb2M0czAwMDFnZDFpZ2ppdDZzb2giLCJpYXQiOjE2OTI3ODgzODYsImV4cCI6MTY5MjgyNDM4Nn0.MkJPxiUP-Q9YQkqly3NurV7v7ynXGrIYeBqSL9a2Fg8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomFullName}}\",\n    \"password\": \"password123\",\n    \"role\": \"ADMIN\",\n    \"email\": \"admin@email.dev\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/cllnljjcr0000gd1ionqfh4f9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"cllnljjcr0000gd1ionqfh4f9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/cllnloc4s0001gd1igjit6soh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"cllnloc4s0001gd1igjit6soh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
